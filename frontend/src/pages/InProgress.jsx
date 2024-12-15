@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import TaskBox from "../components/TaskBox";
+import TaskBox from "../Components/TaskBox";
 
 const InProgress = ({ progressCollapse }) => {
 	const inProgress = useSelector((store) => store.task.inProgress);

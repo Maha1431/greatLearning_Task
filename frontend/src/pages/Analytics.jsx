@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../css/Analytics.css";
 import useGetAnalytics from "../hooks/useGetAnalytics";
-import Loading from "../components/Loading";
+import Loading from "../Components/Loading";
 const Analytics = () => {
 	const [analytics, setAnalytics] = useState(null);
 	useGetAnalytics(setAnalytics);

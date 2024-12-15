@@ -1,5 +1,5 @@
 import { useSelector } from "react-redux";
-import TaskBox from "../components/TaskBox";
+import TaskBox from "../Components/TaskBox";
 
 const Done = ({ doneCollapse }) => {
 	const done = useSelector((store) => store.task.done);

@@ -1,5 +1,5 @@
 import { TbDots } from "react-icons/tb";
-import TaskBox from "../components/TaskBox";
+import TaskBox from "../Components/TaskBox";
 import { useSelector } from "react-redux";
 
 const Backlog = ({ backlogCollapse }) => {
