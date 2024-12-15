@@ -12,7 +12,7 @@ import {
 	TaskCard,
 	TaskDelete,
 	UpdateCategory,
-} from "../components/Model";
+} from "../Components/Model";
 
 const Dashboard = () => {
   const state = useSelector((store) => store.state);
