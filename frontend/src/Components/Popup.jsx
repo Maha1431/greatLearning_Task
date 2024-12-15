@@ -1,5 +1,5 @@
 import React from "react";
-import "../css/PopUp.css";
+import "../css/Popup.css";
 import { useDispatch } from "react-redux";
 import {
 	setTaskCardM,
