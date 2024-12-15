@@ -8,6 +8,7 @@ import { useDispatch } from "react-redux";
 import { addAuth } from "../redux/slices/authSlice";
 import AuthImage from "../assets/AuthImage.png";
 import "../css/Register_Login.css";
+import config from "../config";
 
 const Register_Login = () => {
 	const [isRegister, setIsRegister] = useState(false);
@@ -25,7 +26,7 @@ const Register_Login = () => {
 	const logInUser = (e) => {
 		toast.loading("Wait until you SignIn");
 		e.target.disabled = true;
-		fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/login`, {
+		fetch(`${config.BACKENDURL}/api/auth/login`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",
@@ -75,7 +76,7 @@ const Register_Login = () => {
 	const registerUser = (e) => {
 		toast.loading("Wait until you SignUp");
 		e.target.disabled = true;
-		fetch(`${import.meta.env.VITE_BACKEND_URL}/api/auth/register`, {
+		fetch(`${config.BACKENDURL}/api/auth/register`, {
 			method: "POST",
 			headers: {
 				"Content-Type": "application/json",

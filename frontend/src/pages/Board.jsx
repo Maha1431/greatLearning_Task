@@ -15,7 +15,7 @@ import {
 	setTaskCardM,
 	setTaskFilterP,
 } from "../redux/slices/stateSlice";
-import { TaskFilter } from "../components/PopUp";
+import { TaskFilter } from "../Components/Popup";
 import useAllTask from "../hooks/useAllTask";
 const Board = () => {
 	const [backlogCollapse, setBacklogCollapse] = useState(false);
