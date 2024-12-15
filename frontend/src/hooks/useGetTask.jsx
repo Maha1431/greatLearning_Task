@@ -1,8 +1,9 @@
 import { useEffect } from "react";
 import { toast } from "react-toastify";
+import config from "../config";
 const useGetTask = (id, setTask) => {
 	const getTask = () => {
-		fetch(`${import.meta.env.VITE_BACKEND_URL}/api/task/${id}`, {
+		fetch(`${config.BACKENDURL}/api/task/${id}`, {
 			method: "GET",
 			headers: { "Content-Type": "application/json" },
 		})

@@ -7,10 +7,11 @@ import {
 	deleteInProgressTask,
 	deleteTodoTask,
 } from "../redux/slices/taskSlice";
+import config from "../config";
 const useDeleteTask = (e, setLoad, dispatch, id) => {
 	setLoad("Loading...");
 	e.target.disabled = true;
-	fetch(`${import.meta.env.VITE_BACKEND_URL}/api/task/${id}`, {
+	fetch(`${config.BACKENDURL}/api/task/${id}`, {
 		method: "DELETE",
 		headers: getHeader(),
 	})

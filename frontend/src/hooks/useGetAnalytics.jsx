@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import { toast } from "react-toastify";
 import getHeader from "../utils/header";
+import config from "../config";
 const useGetAnalytics = (setAnalytics) => {
 	const getAnalytics = () => {
-		fetch(`${import.meta.env.VITE_BACKEND_URL}/api/analytics`, {
+		fetch(`${config.BACKENDURL}/api/analytics`, {
 			method: "GET",
 			headers: getHeader(),
 		})

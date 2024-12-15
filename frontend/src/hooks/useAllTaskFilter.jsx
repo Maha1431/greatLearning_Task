@@ -9,12 +9,12 @@ import {
 } from "../redux/slices/taskSlice";
 import { setLoading } from "../redux/slices/stateSlice";
 import { toast } from "react-toastify";
-
+import config from "../config";
 const useAllTask = () => {
 	const dispatch = useDispatch();
 	const fetchData = () => {
 		dispatch(setLoading(true));
-		fetch(`${import.meta.env.VITE_BACKEND_URL}/api/task/all`, {
+		fetch(`${config.BACKENDURL}/api/task/all`, {
 			method: "GET",
 			headers: getHeader(),
 		})

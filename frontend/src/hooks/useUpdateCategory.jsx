@@ -4,6 +4,7 @@ import {
 	setCategoryName,
 	setUpdateCategoryM,
 } from "../redux/slices/stateSlice";
+import config from "../config";
 import {
 	addBacklogTask,
 	addDoneTask,
@@ -24,7 +25,7 @@ const useUpdateCategory = (
 ) => {
 	setLoad("Loading...");
 	e.target.disabled = true;
-	fetch(`${import.meta.env.VITE_BACKEND_URL}/api/task/category/${taskId}`, {
+	fetch(`${config.BACKENDURL}/api/task/category/${taskId}`, {
 		method: "PUT",
 		headers: getHeader(),
 		body: JSON.stringify({

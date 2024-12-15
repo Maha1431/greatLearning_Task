@@ -6,10 +6,11 @@ import {
 	setBoardEmail,
 } from "../redux/slices/stateSlice";
 import { addAuth } from "../redux/slices/authSlice";
+import config from "../config";
 const useAddToBoard = (e, setLoad, dispatch, email) => {
 	setLoad("Loading...");
 	e.target.disabled = true;
-	fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/board`, {
+	fetch(`${config.BACKENDURL}/api/user/board`, {
 		method: "POST",
 		headers: getHeader(),
 		body: JSON.stringify({

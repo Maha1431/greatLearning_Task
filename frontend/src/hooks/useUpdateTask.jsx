@@ -1,6 +1,7 @@
 import getHeader from "../utils/header";
 import { toast } from "react-toastify";
 import { setTaskCardM, setTaskM } from "../redux/slices/stateSlice";
+import config from "../config";
 import {
 	deleteBacklogTask,
 	deleteDoneTask,
@@ -24,7 +25,7 @@ const useUpdateTask = (
 ) => {
 	setLoad("Loading...");
 	e.target.disabled = true;
-	fetch(`${import.meta.env.VITE_BACKEND_URL}/api/task/${id}`, {
+	fetch(`${config.BACKENDURL}/api/task/${id}`, {
 		method: "PUT",
 		headers: getHeader(),
 		body: JSON.stringify({

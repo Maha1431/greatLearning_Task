@@ -2,6 +2,7 @@ import getHeader from "../utils/header";
 import { toast } from "react-toastify";
 import { setTaskCardM, setTaskM } from "../redux/slices/stateSlice";
 import { addTodoTask } from "../redux/slices/taskSlice";
+import config from "../config";
 const useAddTask = (
 	e,
 	setLoad,
@@ -14,7 +15,7 @@ const useAddTask = (
 ) => {
 	setLoad("Loading...");
 	e.target.disabled = true;
-	fetch(`${import.meta.env.VITE_BACKEND_URL}/api/task/add`, {
+	fetch(`${config.BACKENDURL}/api/task/add`, {
 		method: "POST",
 		headers: getHeader(),
 		body: JSON.stringify({
