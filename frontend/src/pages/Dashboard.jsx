@@ -4,7 +4,7 @@ import Navbar from "./Navbar";
 const Board = lazy(() => import("./Board.jsx"));
 const Analytics = lazy(() => import("./Analytics.jsx"));
 const Settings = lazy(() => import("./Settings.jsx"));
-import "../css/dashboard.css"
+import "../css/Dashboard.css"
 import {
 	AddedPeople,
 	AddPeople,
