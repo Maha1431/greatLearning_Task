@@ -7,7 +7,7 @@ import { CiLock, CiMail, CiUser } from "react-icons/ci";
 import { useDispatch } from "react-redux";
 import { addAuth } from "../redux/slices/authSlice";
 import AuthImage from "../assets/AuthImage.png";
-import "../css/Register_Login.css";
+import "../css/Register_login.css";
 import config from "../config";
 
 const Register_Login = () => {
