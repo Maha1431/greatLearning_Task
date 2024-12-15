@@ -9,7 +9,7 @@ import { IoIosArrowDown } from "react-icons/io";
 import "../css/Task.css";
 import { useDispatch, useSelector } from "react-redux";
 import { generateDate } from "../utils/generateDate";
-import { LuUsers2 } from "react-icons/lu";
+import { LuUsers } from 'react-icons/lu';  
 import {
 	setAddPeopleM,
 	setTaskCardM,
@@ -55,7 +55,7 @@ const Board = () => {
 							className="add-people"
 							onClick={() => dispatch(setAddPeopleM(true))}
 						>
-							<LuUsers2 />
+							<LuUsers />
 							<span>Add People</span>
 						</span>
 					</div>

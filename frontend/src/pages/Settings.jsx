@@ -7,6 +7,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { removeAuth } from "../redux/slices/authSlice";
 import getHeader from "../utils/header";
+import config from "../config"
 
 const Settings = () => {
 	const auth = useSelector((store) => store.auth);
@@ -17,6 +18,7 @@ const Settings = () => {
 	const [load, setLoad] = useState("");
 	const [isShowO, setIsShowO] = useState(false);
 	const [isShowN, setIsShowN] = useState(false);
+
 	const dashboardSection = useSelector(
 		(store) => store.state.dashboardSection
 	);
@@ -40,7 +42,7 @@ const Settings = () => {
 	const updateUser = (e) => {
 		toast.loading("Wait until you SignUp");
 		e.target.disabled = true;
-		fetch(`${import.meta.env.VITE_BACKEND_URL}/api/user/update`, {
+		fetch(`${config.BACKENDURL}/api/user/update`, {
 			method: "PUT",
 			headers: getHeader(),
 			body: JSON.stringify({
