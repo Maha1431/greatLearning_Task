@@ -37,7 +37,7 @@ async function main() {
 app.get("/", (req, res) => {
 	res.json({
 		message: "Welcome to Task_Management!",
-		frontend_url: process.env.FRONTEND_URL,
+		// frontend_url: process.env.FRONTEND_URL,
 	});
 });
 
